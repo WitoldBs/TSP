@@ -115,7 +115,7 @@ def breed(population, topparents,matingpool):
     children = []
     length = len(population)-topparents
     for i in range(topparents):
-        entry = matingPool(topparents,getFittest(population))[i]
+        entry = matingpool[i]
         children.append(entry)
     for i in range((length)):
         children.append(crossover(matingpool[0],matingpool[1]))
@@ -155,10 +155,6 @@ def geneticPlot(cities, popsize, iterations, mutation_rate, topparents):
 
 algorithm = geneticAlgorithm(cities,popsize,iterations,mutation_rate,topparents)
 plot = geneticPlot(cities,popsize,iterations,mutation_rate,topparents)
-
-
-
-
 
 boundingbox = (2.373,7.273,49.411,53.697)
 background = plt.imread("/Users/witekbieganski/PycharmProjects/TSP/Data/map.png")
