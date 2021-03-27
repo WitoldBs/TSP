@@ -1,7 +1,7 @@
 import numpy as np, matplotlib.pyplot as plt, pandas as pd, random
 from math import *
 
-data = pd.read_excel("/Users/witekbieganski/PycharmProjects/TSP/Data/airports.xlsx", engine = "openpyxl")
+data = pd.read_excel("Data/airports.xlsx", engine = "openpyxl")
 
 npdata = data.to_numpy()
 
@@ -157,7 +157,7 @@ algorithm = geneticAlgorithm(cities,popsize,iterations,mutation_rate,topparents)
 plot = geneticPlot(cities,popsize,iterations,mutation_rate,topparents)
 
 boundingbox = (2.373,7.273,49.411,53.697)
-background = plt.imread("/Users/witekbieganski/PycharmProjects/TSP/Data/map.png")
+background = plt.imread("Data/map.png")
 
 x = []
 y = []
